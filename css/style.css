@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Oswald:400,700&subset=latin-ext");
+body { margin: 0; background-image: url("../images/3.jpg"); background-repeat: no-repeat; background-size: cover; }
+
+.bg-dark { background-color: transparent !important; }
+
+.navbar { height: 90px; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; margin-top: 10px; margin-bottom: 50px; }
+
+.navbar h1 { font-size: 40px; letter-spacing: 2px; margin-left: 50px; font-family: 'Oswald', sans-serif; text-shadow: 3px 3px 2px #969696; }
+
+.container { display: -webkit-box; display: -ms-flexbox; display: flex; color: white; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+
+.container h2 { font-family: 'Lato', sans-serif; font-weight: bold; font-size: 40px; padding: 10px; margin: 0 auto; }
+
+.container ul { list-style-type: none; }
+
+.flag { width: 200px; margin: 20px 0 10px 10px; }
+
+.flag img { width: 100%; }
+
+.country { font-size: 36px; }
+
+.country li { margin-bottom: 30px; }
+
+.country li:after { content: ""; display: block; height: 1px; width: 88%; margin: 20px auto; background: #f00; }
+
+.country p { font-size: 25px; margin: 0; font-family: 'Lato', sans-serif; }
+
+.country span { font-weight: bold; }
