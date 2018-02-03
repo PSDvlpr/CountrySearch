@@ -1,6 +1,6 @@
 $(function() {
 
-var url = 'https://restcountries.eu/rest/v1/name/';
+var url = 'https://restcountries.eu/rest/v2/name/';
 var countriesList = $('#countries');
 
 
@@ -19,11 +19,27 @@ function searchCountries() {
 }
 
 function showCountriesList(resp) {
-  countriesList.empty();
+  var countries = [],
+      country;
+
   resp.forEach(function(item){
-    $('li').text(item.name).appendTo(countriesList);
+    country = $('<li>').addClass('country').text(item.name);
+    country.append($('<div>').addClass("flag").html('<img src="' + item.flag + '"></img>'));
+    country.append($('<p>').text('Region: ' + item.subregion));
+    country.append($('<p>').text('Powierzchnia: ' + item.area + ' m2'));
+    country.append($('<p>').text('Populacja: ' + item.population + ' osób'));
+
+    countries.push(country);
   });
 
+  countriesList.empty().append(countries);
+
+  $('li p').each(function() {
+    var $this = $(this),
+        text = $this.text().split(':');
+
+        $this.html('<span>' + text[0] + ':</span>' + text[1]);
+  });
 }
 
 });
