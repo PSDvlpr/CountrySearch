@@ -7,16 +7,24 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+<body>
 
-  <div>
-    <h1>Country search engine</h1>
-    <button id="search">Search a country</button>
-    <input id="country-name" type="text" />
-    <h2>List of countries</h2>
-    <ul id="countries">
-      <li>No data</li>
-    </ul>
-  </div>
+  <section>
+    <nav class="navbar navbar-dark bg-dark">
+      <h1 class="navbar-brand">Country search engine</h1>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="search" aria-label="Search" id="country-name" type="text">
+        <button class="btn btn-light" type="button" id="search">Search a country</button>
+      </form>
+    </nav>
+  </section>
+  <section class="country">
+    <div class="container">
+      <h2>List of countries</h2>
+      <ul id="countries">
+      </ul>
+    </div>
+  </section>
 
   <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/script.js"></script>
